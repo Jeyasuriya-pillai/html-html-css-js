@@ -1,0 +1,64 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Greeting Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+
+        input {
+            padding: 10px;
+            font-size: 16px;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            width: 250px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #2e8b57;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #3cb371;
+        }
+
+        #greeting {
+            margin-top: 20px;
+            font-size: 20px;
+            color: #2e8b57;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome!</h1>
+    <p>Enter your name!</p>
+    
+    <input type="text" id="nameInput" placeholder="Enter your name">
+    <button onclick="enterUser()">Enter</button>
+    
+    <p id="enter"></p>
+
+    <script>
+        function enterUser() {
+            var userName = document.getElementById('nameInput').value;
+            if (userName.trim() !== "") {
+                document.getElementById('enter').textContent = "Hello, " + userName + "! Welcome to my website!";
+                alert("Hello, " + userName + "! Welcome to my website!");
+            } else {
+                document.getElementById('enter').textContent = "Please enter your name.";
+                alert("Please enter your name to receive a personalized greeting.");
+            }
+        }
+    </script>
+</body>
+</html>
